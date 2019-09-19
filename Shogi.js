@@ -1,4 +1,3 @@
-
 Vue.component('fu', {
   template:
   //'<span><polygon @click="move()" :points="points" stroke = "black" fill = "wheat"></polygon><text @click="move()" x="100" y="0" >本日は晴天なり</text></div></span>',
