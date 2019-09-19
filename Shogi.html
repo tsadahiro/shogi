@@ -5,14 +5,12 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  <div id="app" @move="move()">
+  <div id="app" >
     <svg width="800" height="800">
-      <g transform = "translate(100,100)">
-      <rect v-for="x in Array(9).keys()" :x="100+100*(x%3)" v-bind:y="100+100*parseInt(x/3)" width = "100" height="100" stroke="black" fill="white"></rect>
-      <fu v-for="f in fu" :teban="f.teban" :x="f.x" :y="f.y"></fu>
-      <ou v-for="o in ou" :teban="o.teban" :x="o.x" :y="o.y"></ou>
-      <gin v-for="g in gin" :teban="g.teban" :x="g.x" :y="g.y"></gin>
-    </g>
+      <g @move="alert('abc')" transform = "translate(100,100)">
+	<rect v-for="x in Array(9).keys()" :x="100+100*(x%3)" v-bind:y="100+100*parseInt(x/3)" width = "100" height="100" stroke="black" fill="white"></rect>
+	<fu v-for="f in fu" :teban="f.teban" :x="f.x" :y="f.y"></fu>
+      </g>
     </svg>
   </div>
   <script src="Shogi.js"></script>
